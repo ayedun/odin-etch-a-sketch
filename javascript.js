@@ -1,16 +1,19 @@
 let board = document.querySelector(".board")
 let size = 16;
 let brushColor = 'black'
+let click = true;
 
 
 
 
 function colorIn() {
+   if(click){
     if(brushColor === 'random') {
-     this.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
-    }
-     else { 
-    this.style.backgroundColor = brushColor;
+        this.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+       }
+        else { 
+       this.style.backgroundColor = brushColor;
+   }
 }
 }
 
@@ -52,5 +55,10 @@ function changeSize(input) {
 
 
 }
+
+board.addEventListener('click', () =>{
+    click = !click;
+})
+
 
 createBoard(size);
