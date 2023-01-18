@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.board {
+    height: 800px;
+    width: 800px;
+    border: 1px solid black;
+    display: grid;
+}
+
+.black {
+    background-color: black;
+}
+
+#text-box { 
+    border: 1px solid black;
+}

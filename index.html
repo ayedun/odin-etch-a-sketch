@@ -14,15 +14,19 @@
 
     <div class="header">
         <h6> Select the Size</h6>
-        <button id="popup"> Select</button>
+    <div> 
+        <input type="text" id="text-box" placeholder="Enter new size here" value="16" onchange="changeSize(this.value)"/>
+        <button id="text-enter"> Select Size</button>
+    </div>
+ 
     </div>
     <div class="board">
 
     </div>
     <div class="footer">
-        <button class="btn btn-primary">Black</button>
-        <button class="btn btn-info">Random</button>
-        <button class="btn btn-danger">Reset</button>
+        <button class="btn btn-primary" onclick="changeColor('black')">Black</button>
+        <button class="btn btn-info" onclick="changeColor('random')">Random</button>
+        <button class="btn btn-danger" onclick="reset()"  >Reset</button>
     </div>
  
     <script src="./javascript.js"></script>    
