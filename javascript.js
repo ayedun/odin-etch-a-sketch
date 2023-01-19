@@ -11,6 +11,13 @@ function colorIn() {
     if(brushColor === 'random') {
         this.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
        }
+    else if(brushColor ==='white'){
+        this.style.backgroundColor = 'white';
+
+
+    }
+
+       
         else { 
        this.style.backgroundColor = brushColor;
    }
@@ -38,7 +45,7 @@ function createBoard(size) {
     board.style.gridTemplateRows = `repeat(${size},1fr)`;
     for (i=0; i< size*size; ++i) {
      let gridElement = document.createElement("div");
-     gridElement.style.backgroundColor = 'blue';
+     gridElement.style.backgroundColor = 'white';
      gridElement.classList.add("grid-element");
      board.insertAdjacentElement("beforeend", gridElement);
      gridElement.addEventListener('mouseover', colorIn);
@@ -46,8 +53,8 @@ function createBoard(size) {
 }}
 
 function changeSize(input) {
-    if (input <1 || input > 64){
-        alert("Invalid amount of squares. Please choose a number between 1 and 64")
+    if (input <1 || input > 100){
+        alert("Invalid amount of squares. Please choose a number between 1 and 100")
     }
    else {
     createBoard(input);

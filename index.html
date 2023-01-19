@@ -13,20 +13,24 @@
     <h1> Ayedun's Etch-A-Sketch</h1>
     <h5> Click to stop drawing. Click again to resume drawing.</h3>
     <div class="header">
-        <h6> Select the Size</h6>
-    <div> 
+        
+    <div class=" top-button"> 
+        <span>Select the Size:</span> 
         <input type="text" id="text-box" placeholder="Enter new size here" value="16" onchange="changeSize(this.value)"/>
         <button id="text-enter"> Select Size</button>
     </div>
  
     </div>
+    
     <div class="board">
 
     </div>
     <div class="footer">
         <button class="btn btn-primary" onclick="changeColor('black')">Black</button>
         <button class="btn btn-info" onclick="changeColor('random')">Random</button>
-        <button class="btn btn-danger" onclick="reset()"  >Reset</button>
+        <button class="btn btn-light" onclick="changeColor('white')">Erasor</button>
+        <button class="btn btn-danger" onclick="reset()">Reset</button>
+        
     </div>
  
     <script src="./javascript.js"></script>    
